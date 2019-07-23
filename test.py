@@ -5,17 +5,6 @@ if (len(sys.argv) != 2):
     quit()
 
 n = int(sys.argv[1])
-a = numpy.zeros((n, n)) # Matrix A
-b = numpy.zeros((n, n)) # Matrix B
-c = numpy.zeros((n, n)) # Matrix C
-
-# Initialize the matrices to some values.
-#for i in range(n):
-    #for j in range(n):
-        #a[i, j] = i * n + j
-        #b[i, j] = j * n + i
-        #c[i, j] = 0
-
 
 d = list(range(n))
 e = list(range(n))
@@ -26,18 +15,10 @@ for i in range(n):
 
 begin = time.time()
 
-
 sum = 0
 for i in range(n):
     sum += e[d[i]] #0.430
     #sum += e[i] #0.181
-
-
-#for i in range(n):
-	#for j in range(n):
-		#for k in range(n):
-			#c[i][j] += a[i][k] * b[k][j]
-
 
 end = time.time()
 print("time: %.6f sec" % (end - begin))
